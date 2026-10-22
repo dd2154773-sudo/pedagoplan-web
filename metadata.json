@@ -1,0 +1,6 @@
+{
+  "name": "PedagoPlan",
+  "description": "Plataforma integral de planeación didáctica, evidencias de aula, centro de plantillas y asistente pedagógico con adaptaciones DUA",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

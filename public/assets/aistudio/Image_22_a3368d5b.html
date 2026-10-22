@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "surface-bright": "#faf8ff", "background": "#faf8ff", "on-error": "#ffffff", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "primary-fixed-dim": "#b6c4ff", "on-secondary-fixed-variant": "#005236", "secondary-fixed": "#6ffbbe", "primary-container": "#1e3a8a", "surface-variant": "#dae2fd", "on-primary-fixed-variant": "#264191", "on-primary-container": "#90a8ff", "on-primary-fixed": "#00164e", "surface-container-highest": "#dae2fd", "on-tertiary-fixed": "#2a1700", "outline-variant": "#c5c5d3", "on-secondary-fixed": "#002113", "surface-dim": "#d2d9f4", "secondary-fixed-dim": "#4edea3", "inverse-surface": "#283044", "primary": "#00236f", "on-secondary-container": "#00714d", "on-tertiary-container": "#ef9900", "tertiary": "#3e2400", "tertiary-container": "#5c3800", "surface-tint": "#4059aa", "primary-fixed": "#dce1ff", "secondary": "#006c49", "tertiary-fixed-dim": "#ffb95f", "inverse-primary": "#b6c4ff", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "inverse-on-surface": "#eef0ff", "surface-container-low": "#f2f3ff", "on-surface-variant": "#444651", "on-tertiary-fixed-variant": "#653e00", "secondary-container": "#6cf8bb", "on-background": "#131b2e", "surface-container-high": "#e2e7ff", "surface": "#faf8ff", "on-surface": "#131b2e", "outline": "#757682", "on-primary": "#ffffff", "on-secondary": "#ffffff", "tertiary-fixed": "#ffddb8", "surface-container": "#eaedff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter": "1.25rem", "space-md": "1rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "margin": "2rem" }, "fontFamily": { "title-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, "fontSize": { "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="PedagoPlan Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1Xuc3jjGmQYqB93jzLK5C4l9j6E4JUnjM1rZ7aO7T4kgTEJ5dlgZBfsqQHZnaiyCaVp-jB3g1pozF3PXzsvSoT48y2mncXGNCt0tIhGGJ3ExhQWkC9kNGrEwBUJxp6S--vlWmEspho9wug8ftS1WmwnvKBwdSsaBz4dP-RW2uUlmSrb3tGRAKCGhFzgVwek1g_CaYwMs71WIwAeWT5kB6a7I3YtTyDcZosoNmP5CujwTNO-OLF3yOQpvxef"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5 leading-none"><span class="font-title-md text-title-md text-primary tracking-tight truncate">PedagoPlan</span><span class="text-[10px] text-on-surface-variant font-label-sm font-semibold opacity-60">•</span><span class="font-label-sm text-label-sm text-on-surface-variant font-semibold truncate">Prácticas</span></div><span class="font-label-sm text-label-sm text-outline tracking-normal truncate">Lic. en Pedagogía • Docente en Formación</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notificaciones" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors focus:outline-none"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 bg-error rounded-full ring-2 ring-surface"></span></button><div class="relative flex items-center justify-center pl-1"><img alt="Estudiante de Pedagogía" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_4px_rgba(19,27,46,0.12)] ring-1 ring-surface-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmgABNugxBbh3J_lUI9nDXzOP0OYFz4WZk-TPh-yfsjobvguEP8Vcowfee1f_Bk16oSzOvUX8aoXn117mxIhoAEorxdJTEfqwhuR-0iRfcg5UP2T-0TR7cJN4m9T2I_G1o05FOSckvPp6gBG3sxYwz7NWB13hxcg7YyYQH6xumJzaDDo488OVNYTF7VCa5Gd0097Jk0oAVBWHrFwGcRpLUuuAx8jOijxY4if2k10MX8vShZGcHoGsLQA"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-secondary rounded-full ring-2 ring-surface"></span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Cabecera de Sección & Contexto Académico -->
+<div class="px-margin-mobile pt-space-sm pb-space-md">
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm font-semibold uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[16px]">folder_special</span>
+<span>Recursos Oficiales de Práctica</span>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface tracking-tight">
+      Centro de Plantillas Oficiales
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+      Formatos normativos editables y descargables para tu práctica pedagógica profesional.
+    </p>
+<!-- Barra de Búsqueda Optimizada -->
+<div class="relative mt-space-md shadow-sm rounded-xl">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full pl-10 pr-10 py-3 bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md font-body-md rounded-xl outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all duration-200" id="search-input" placeholder="Buscar plantillas por formato, materia o instrumento..." type="search"/>
+<button aria-label="Limpiar búsqueda" class="absolute inset-y-0 right-0 pr-3 flex items-center text-outline hover:text-on-surface transition-colors hidden" id="clear-search">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Píldoras de Filtros -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-space-sm -mx-margin-mobile px-margin-mobile mt-1">
+<button class="filter-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all shrink-0 bg-primary text-on-primary shadow-sm" data-category="all">
+        Todos (18)
+      </button>
+<button class="filter-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all shrink-0 bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-category="diario">
+        Diarios de Campo
+      </button>
+<button class="filter-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all shrink-0 bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-category="rubricas">
+        Rúbricas &amp; Listas
+      </button>
+<button class="filter-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all shrink-0 bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-category="nem">
+        Planeación NEM
+      </button>
+<button class="filter-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all shrink-0 bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-category="informes">
+        Informes Finales
+      </button>
+</div>
+</div>
+<!-- Banner Descarga de Paquete Completo Offline -->
+<div class="px-margin-mobile mb-space-md">
+<div class="bg-gradient-to-br from-primary-container to-primary text-on-primary rounded-xl p-space-md shadow-md relative overflow-hidden flex flex-col gap-3">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 bg-on-primary/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest/15 backdrop-blur-md flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px] text-secondary-fixed">archive</span>
+</div>
+<div>
+<span class="inline-block px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-wider font-bold mb-1">
+              Kit Semestral 2024-2025
+            </span>
+<h2 class="font-title-md text-title-md font-semibold leading-tight text-surface-container-lowest">
+              Paquete Integral de Prácticas (.ZIP)
+            </h2>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-surface-container-high/90 relative z-10 leading-snug">
+        Incluye las 18 plantillas oficiales en blanco, glosario de términos NEM, guías de llenado y rúbricas editables para uso sin internet en sedes rurales o sin conectividad.
+      </p>
+<div class="flex items-center justify-between pt-1 relative z-10">
+<span class="font-label-sm text-label-sm text-surface-variant/80 flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">file_download_done</span> 48.2 MB • Verificado
+        </span>
+<button class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold shadow-sm active:scale-95 transition-transform" id="btn-zip-download">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Descargar ZIP</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Listado Dinámico de Plantillas Oficiales -->
+<div class="px-margin-mobile flex flex-col gap-space-md mb-space-lg" id="templates-container">
+<!-- Documento 1: Diario de Campo Reflexivo -->
+<article class="template-item bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex flex-col gap-3" data-category="diario">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-secondary-container/50 text-secondary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Obligatorio Universidad
+          </span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+            15 páginas con guía
+          </span>
+</div>
+<div class="flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm bg-tertiary-fixed/40 px-2 py-0.5 rounded-md shrink-0">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.9</span>
+<span class="text-on-surface-variant opacity-75">(420)</span>
+</div>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold leading-snug">
+          Plantilla Oficial: Diario de Campo Reflexivo (Formato Schön / Freire)
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-relaxed">
+          Estructura quincenal con campos para registro de incidentes críticos, análisis de mediación pedagógica y firma digital del mentor de aula.
+        </p>
+</div>
+<!-- Formatos Disponibles -->
+<div class="flex items-center gap-2 pt-1">
+<span class="font-label-sm text-label-sm text-outline">Formatos:</span>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-error">picture_as_pdf</span> PDF Institucional
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">description</span> Word (.docx)
+          </span>
+</div>
+</div>
+<div class="text-[11px] font-label-sm text-outline flex items-center gap-1 pt-0.5">
+<span class="material-symbols-outlined text-[14px]">update</span>
+<span>Actualizado Ciclo 2024-2025 • Validación DGIRE/SEP</span>
+</div>
+<!-- Acciones de Descarga / Preview -->
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md font-semibold hover:bg-surface-container transition-colors flex items-center justify-center gap-1.5" onclick="openPreview('diario')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Previsualizar</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-1.5 shadow-sm" onclick="triggerDownload('Plantilla_Diario_Campo_Schon_Freire.docx')">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Descargar Doc</span>
+</button>
+</div>
+</article>
+<!-- Documento 2: Rúbricas Socioformativas de Evaluación -->
+<article class="template-item bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex flex-col gap-3" data-category="rubricas">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+            Evaluación Formativa
+          </span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+            NEM Primaria / Fase 3, 4 y 5
+          </span>
+</div>
+<div class="flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm bg-tertiary-fixed/40 px-2 py-0.5 rounded-md shrink-0">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.8</span>
+<span class="text-on-surface-variant opacity-75">(318)</span>
+</div>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold leading-snug">
+          Rúbricas Socioformativas de Evaluación (4 Niveles de Dominio)
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-relaxed">
+          Matrices analíticas graduadas con descriptores cualitativos para evaluar proyectos comunitarios, saberes disciplinares y comprensión lectora reflexiva.
+        </p>
+</div>
+<!-- Formatos Disponibles -->
+<div class="flex items-center gap-2 pt-1 flex-wrap">
+<span class="font-label-sm text-label-sm text-outline">Formatos:</span>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-error">picture_as_pdf</span> PDF
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">description</span> Word
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">table_chart</span> Excel (.xlsx)
+          </span>
+</div>
+</div>
+<div class="text-[11px] font-label-sm text-outline flex items-center gap-1 pt-0.5">
+<span class="material-symbols-outlined text-[14px]">table_rows</span>
+<span>Incluye fórmulas predefinidas para ponderación en Excel</span>
+</div>
+<!-- Acciones -->
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md font-semibold hover:bg-surface-container transition-colors flex items-center justify-center gap-1.5" onclick="openPreview('rubricas')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Previsualizar</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-1.5 shadow-sm" onclick="triggerDownload('Rubricas_Socioformativas_NEM.xlsx')">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Descargar</span>
+</button>
+</div>
+</article>
+<!-- Documento 3: Lista de Cotejo para Observación de Clima de Aula -->
+<article class="template-item bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex flex-col gap-3" data-category="rubricas">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed/50 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+            Diagnóstico Inicial
+          </span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+            Práctica I y II
+          </span>
+</div>
+<div class="flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm bg-tertiary-fixed/40 px-2 py-0.5 rounded-md shrink-0">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.7</span>
+<span class="text-on-surface-variant opacity-75">(190)</span>
+</div>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold leading-snug">
+          Lista de Cotejo para Observación de Clima de Aula
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-relaxed">
+          Indicadores observables de interacción dialógica entre pares, manejo de tiempos pedagógicos, disposición física del espacio y resolución pacífica de conflictos.
+        </p>
+</div>
+<!-- Formatos -->
+<div class="flex items-center gap-2 pt-1">
+<span class="font-label-sm text-label-sm text-outline">Formatos:</span>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-error">picture_as_pdf</span> PDF
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">description</span> Word
+          </span>
+</div>
+</div>
+<div class="text-[11px] font-label-sm text-outline flex items-center gap-1 pt-0.5">
+<span class="material-symbols-outlined text-[14px]">checklist</span>
+<span>32 reactivos validados por academias de práctica docente</span>
+</div>
+<!-- Acciones -->
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md font-semibold hover:bg-surface-container transition-colors flex items-center justify-center gap-1.5" onclick="openPreview('clima')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Previsualizar</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-1.5 shadow-sm" onclick="triggerDownload('Lista_Cotejo_Clima_Aula_2024.docx')">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Descargar</span>
+</button>
+</div>
+</article>
+<!-- Documento 4: Formato Estándar de Planeación Didáctica por Proyectos (ABP) -->
+<article class="template-item bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex flex-col gap-3" data-category="nem">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">
+            Metodologías Activas
+          </span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+            SEP / Plan de Estudio 2022
+          </span>
+</div>
+<div class="flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm bg-tertiary-fixed/40 px-2 py-0.5 rounded-md shrink-0">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">5.0</span>
+<span class="text-on-surface-variant opacity-75">(654)</span>
+</div>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold leading-snug">
+          Formato Estándar de Planeación Didáctica por Proyectos (ABP)
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-relaxed">
+          Diseño secuencial en 3 fases y 11 momentos: articulación de campos formativos, ejes articuladores, problemas del contexto y evaluación de entregables.
+        </p>
+</div>
+<!-- Formatos -->
+<div class="flex items-center gap-2 pt-1">
+<span class="font-label-sm text-label-sm text-outline">Formatos:</span>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">description</span> Word Editable
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-error">picture_as_pdf</span> PDF Ejemplo
+          </span>
+</div>
+</div>
+<div class="text-[11px] font-label-sm text-outline flex items-center gap-1 pt-0.5">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+<span>Alineado a los 7 ejes articuladores del currículo nacional</span>
+</div>
+<!-- Acciones -->
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md font-semibold hover:bg-surface-container transition-colors flex items-center justify-center gap-1.5" onclick="openPreview('planeacion')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Previsualizar</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-1.5 shadow-sm" onclick="triggerDownload('Planeacion_Proyectos_ABP_Oficial.docx')">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Descargar</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Estado Vacío Dinámico cuando no hay resultados de búsqueda -->
+<div class="hidden px-margin-mobile pb-space-xl flex-col items-center justify-center text-center py-10" id="no-results">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-outline mb-3">
+<span class="material-symbols-outlined text-[32px]">manage_search</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">No se encontraron plantillas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mt-1">
+      Prueba con otros términos como "diario", "rúbrica", "planeación" o restablece los filtros.
+    </p>
+<button class="mt-4 px-4 py-2 bg-surface-container-high text-primary rounded-lg font-label-md text-label-md font-semibold" onclick="resetFilters()">
+      Mostrar todas las plantillas
+    </button>
+</div>
+<!-- Mini Guía de Acreditación Institucional -->
+<div class="px-margin-mobile pb-space-lg">
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5 shrink-0">verified_user</span>
+<div class="flex flex-col gap-1">
+<h4 class="font-label-md text-label-md text-on-surface font-bold">Validez y Criterios Institucionales</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Todos los formatos cumplen con los lineamientos del Marco Curricular Común y son admitidos en supervisiones escolares de práctica docente de Escuelas Normales y Universidades Pedagógicas.
+        </p>
+</div>
+</div>
+</div>
+<!-- MODAL DE PREVISUALIZACIÓN RÁPIDA INTEGRADA -->
+<div aria-hidden="true" class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4 opacity-0 pointer-events-none transition-opacity duration-300" id="preview-modal">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-t-2xl sm:rounded-2xl max-h-[751px] flex flex-col shadow-2xl overflow-hidden transform translate-y-8 transition-transform duration-300" id="preview-modal-panel">
+<!-- Cabecera del Modal -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">preview</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold" id="modal-title">Previsualización de Documento</span>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" onclick="closePreview()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Contenedor Scrollable del Preview Tipo Hoja Membretada -->
+<div class="p-space-md overflow-y-auto flex flex-col gap-space-md bg-surface-container/30">
+<!-- Hoja de Simulación Impresa / Digital -->
+<div class="bg-surface-container-lowest shadow-md rounded-lg p-5 flex flex-col gap-4 text-on-surface">
+<!-- Membrete Oficial -->
+<div class="flex items-center justify-between pb-3 bg-gradient-to-r from-transparent via-surface-container-high/40 to-transparent p-2 rounded">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-md bg-primary flex items-center justify-center text-on-primary font-bold text-xs tracking-tighter">
+                SEP•UPN
+              </div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-primary tracking-widest uppercase">Dirección General de Educación Superior</span>
+<span class="text-[12px] font-bold text-on-surface leading-tight" id="doc-folio-title">Facultad de Pedagogía • Prácticas Docentes</span>
+<span class="text-[9px] text-outline">Clave de Registro Formato: DOC-PED-2024-V3</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary border border-secondary/20">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+</div>
+<!-- Campos Sombreados de Ejemplo -->
+<div class="grid grid-cols-2 gap-2 text-[11px] font-body-sm">
+<div class="p-2 rounded bg-surface-container-low">
+<span class="text-outline font-semibold block text-[10px]">ESTUDIANTE PRACTICANTE:</span>
+<span class="font-medium text-on-surface">Valeria Gómez Trejo (8vo Sem)</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<span class="text-outline font-semibold block text-[10px]">DOCENTE TUTOR / MENTOR:</span>
+<span class="font-medium text-on-surface">Dr. Raúl Méndez Cruz</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low col-span-2">
+<span class="text-outline font-semibold block text-[10px]">ESCUELA SEDE / FASE EDUCATIVA:</span>
+<span class="font-medium text-on-surface">Esc. Primaria "Benito Juárez" • Clave CCT: 09DPR1428Z</span>
+</div>
+</div>
+<!-- Cuerpo Simulado de Contenido de la Plantilla -->
+<div class="flex flex-col gap-2 pt-1" id="modal-body-content">
+<!-- Inyectado dinámicamente -->
+</div>
+<!-- Zona de Firmas y Sello de Acreditación -->
+<div class="pt-4 grid grid-cols-2 gap-4 items-end mt-2">
+<div class="flex flex-col items-center text-center">
+<div class="w-full h-8 bg-surface-container/60 rounded flex items-center justify-center mb-1">
+<span class="text-[10px] text-primary italic font-serif opacity-70">Valeria Gómez T. [Digital ID]</span>
+</div>
+<div class="w-full h-[1px] bg-outline-variant"></div>
+<span class="text-[9px] text-outline mt-1 font-semibold">Firma del Docente en Formación</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-full h-8 bg-secondary-fixed/30 rounded flex items-center justify-center mb-1">
+<span class="text-[9px] text-secondary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">task_alt</span> Sello de Autorización
+                </span>
+</div>
+<div class="w-full h-[1px] bg-outline-variant"></div>
+<span class="text-[9px] text-outline mt-1 font-semibold">Validación del Supervisor Escolar</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Modal con Botones -->
+<div class="p-space-md bg-surface-container-lowest flex items-center justify-end gap-2 shadow-lg">
+<button class="px-4 py-2.5 rounded-lg text-on-surface-variant font-label-md text-label-md font-semibold hover:bg-surface-container transition-colors" onclick="closePreview()">
+          Cerrar
+        </button>
+<button class="px-5 py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary/90 flex items-center gap-1.5 shadow-sm" id="modal-download-btn" onclick="triggerDownload('Plantilla_Oficial_Descarga.docx')">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Descargar Editable (.docx)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Notificación Toast de Descarga Exitosa -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 opacity-0 pointer-events-none transition-all duration-300 max-w-[90vw]" id="download-toast">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold truncate" id="toast-filename">Descargando archivo...</span>
+<span class="font-body-sm text-[12px] opacity-80 truncate">Archivo oficial listo para edición</span>
+</div>
+</div>
+</div>
+<script>
+  // Datos interactivos para previsualizaciones rápidas
+  const previewData = {
+    diario: {
+      title: "Diario de Campo Reflexivo (Schön / Freire)",
+      content: `
+        <div class="p-2.5 rounded bg-surface-container-low flex flex-col gap-1.5">
+          <span class="text-[10px] font-bold text-primary">1. INCIDENTE CRÍTICO DEL DÍA (DESCRIPCIÓN FENOMENOLÓGICA):</span>
+          <p class="text-[11px] text-on-surface leading-normal italic">
+            "Durante la sesión de trabajo colaborativo sobre fracciones, el subgrupo 3 presentó resistencia a la distribución de roles. Juan interrumpió la dinámica expresando desmotivación..."
+          </p>
+        </div>
+        <div class="p-2.5 rounded bg-surface-container-low flex flex-col gap-1.5">
+          <span class="text-[10px] font-bold text-primary">2. REFLEXIÓN EN Y SOBRE LA ACCIÓN (MEDIACIÓN PEDAGÓGICA):</span>
+          <p class="text-[11px] text-on-surface leading-normal">
+            Se implementó el diálogo socrático guiado para reencauzar la toma de acuerdos. Sustentado en Freire (1970), la autoridad docente transitó hacia una horizontalidad dialógica de escucha activa.
+          </p>
+        </div>
+        <div class="p-2.5 rounded bg-surface-container-low flex flex-col gap-1.5">
+          <span class="text-[10px] font-bold text-primary">3. COMPROMISOS DE TRANSFORMACIÓN DE LA PRÁCTICA:</span>
+          <ul class="text-[11px] list-disc list-inside text-on-surface-variant">
+            <li>Diseñar andamiajes visuales diferenciados previos al trabajo por equipos.</li>
+            <li>Monitorear la autorregulación socioemocional al inicio de cada clase.</li>
+          </ul>
+        </div>
+      `,
+      file: "Plantilla_Diario_Campo_Schon_Freire.docx"
+    },
+    rubricas: {
+      title: "Rúbricas Socioformativas de Evaluación NEM",
+      content: `
+        <div class="p-2 rounded bg-surface-container-low flex flex-col gap-2">
+          <span class="text-[10px] font-bold text-primary">MATRIZ GRADUADA (PROYECTO COMUNITARIO):</span>
+          <div class="grid grid-cols-4 gap-1 text-[9px] text-center">
+            <div class="p-1 rounded bg-surface-container-high font-semibold text-outline">Receptivo (I)</div>
+            <div class="p-1 rounded bg-secondary-fixed/30 font-semibold text-secondary">Resolutivo (II)</div>
+            <div class="p-1 rounded bg-secondary-fixed/60 font-semibold text-secondary">Autónomo (III)</div>
+            <div class="p-1 rounded bg-secondary-container font-bold text-on-secondary-container">Estratégico (IV)</div>
+          </div>
+          <p class="text-[11px] text-on-surface mt-1 leading-snug">
+            <strong>Criterio:</strong> Identificación del problema colectivo con enfoque de inclusión y equidad social contextualizada.
+          </p>
+        </div>
+        <div class="p-2 rounded bg-surface-container-low flex flex-col gap-1 text-[11px]">
+          <span class="text-[10px] font-bold text-primary">DESCRIPTOR NIVEL ESTRATÉGICO:</span>
+          <p class="text-on-surface leading-relaxed italic">
+            "Propone soluciones innovadoras a la problemática del entorno escolar, argumentando el impacto comunitario y vinculando saberes matemáticos con pensamiento crítico."
+          </p>
+        </div>
+      `,
+      file: "Rubricas_Socioformativas_NEM.xlsx"
+    },
+    clima: {
+      title: "Lista de Cotejo: Clima de Aula",
+      content: `
+        <div class="p-2 rounded bg-surface-container-low flex flex-col gap-1.5">
+          <span class="text-[10px] font-bold text-primary">DIMENSIÓN 1: AMBIENTE DIALÓGICO Y RESPETO</span>
+          <div class="flex items-center justify-between text-[11px] py-1 border-b border-surface-container-high">
+            <span>• Escucha atenta y turnos de palabra regulados</span>
+            <span class="text-secondary font-bold text-[10px]">CUMPLE (SÍ)</span>
+          </div>
+          <div class="flex items-center justify-between text-[11px] py-1 border-b border-surface-container-high">
+            <span>• Resolución pacífica ante diferencias de opinión</span>
+            <span class="text-secondary font-bold text-[10px]">CUMPLE (SÍ)</span>
+          </div>
+          <div class="flex items-center justify-between text-[11px] py-1">
+            <span>• Distribución inclusiva del espacio físico del aula</span>
+            <span class="text-tertiary font-bold text-[10px]">EN PROCESO</span>
+          </div>
+        </div>
+      `,
+      file: "Lista_Cotejo_Clima_Aula_2024.docx"
+    },
+    planeacion: {
+      title: "Planeación Didáctica por Proyectos (ABP)",
+      content: `
+        <div class="p-2 rounded bg-surface-container-low flex flex-col gap-1.5">
+          <span class="text-[10px] font-bold text-primary">FASE 1: PLANEACIÓN / MOMENTO 1 (IDENTIFICACIÓN)</span>
+          <p class="text-[11px] text-on-surface leading-snug">
+            <strong>Problema Comunitario:</strong> Escasez y uso inconsciente del agua en los hogares de la colonia San Mateo.
+          </p>
+        </div>
+        <div class="p-2 rounded bg-surface-container-low flex flex-col gap-1.5">
+          <span class="text-[10px] font-bold text-primary">CAMPOS FORMATIVOS ARTICULADOS:</span>
+          <div class="flex flex-wrap gap-1 text-[10px]">
+            <span class="bg-primary-fixed text-primary px-1.5 py-0.5 rounded font-medium">Lenguajes</span>
+            <span class="bg-secondary-fixed text-secondary px-1.5 py-0.5 rounded font-medium">Saberes y Pensamiento Científico</span>
+            <span class="bg-tertiary-fixed text-tertiary px-1.5 py-0.5 rounded font-medium">Ética, Naturaleza y Sociedades</span>
+          </div>
+        </div>
+        <div class="p-2 rounded bg-surface-container-low flex flex-col gap-1 text-[11px]">
+          <span class="text-[10px] font-bold text-primary">PRODUCTO INTEGRADOR:</span>
+          <p class="text-on-surface">Campaña comunitaria de captación pluvial con carteles infográficos y prototipos a escala.</p>
+        </div>
+      `,
+      file: "Planeacion_Proyectos_ABP_Oficial.docx"
+    }
+  };
+
+  // Abrir y cerrar el modal
+  function openPreview(key) {
+    const data = previewData[key] || previewData.diario;
+    document.getElementById('modal-title').textContent = data.title;
+    document.getElementById('modal-body-content').innerHTML = data.content;
+    
+    const downloadBtn = document.getElementById('modal-download-btn');
+    downloadBtn.setAttribute('onclick', `triggerDownload('${data.file}')`);
+    
+    const modal = document.getElementById('preview-modal');
+    const panel = document.getElementById('preview-modal-panel');
+    
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.add('opacity-100');
+    panel.classList.remove('translate-y-8');
+    panel.classList.add('translate-y-0');
+  }
+
+  function closePreview() {
+    const modal = document.getElementById('preview-modal');
+    const panel = document.getElementById('preview-modal-panel');
+    
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modal.classList.remove('opacity-100');
+    panel.classList.add('translate-y-8');
+    panel.classList.remove('translate-y-0');
+  }
+
+  // Descarga simulada con feedback accesible
+  function triggerDownload(filename) {
+    const toast = document.getElementById('download-toast');
+    const toastName = document.getElementById('toast-filename');
+    
+    toastName.textContent = filename;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100', '-translate-y-2');
+    
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'pointer-events-none');
+      toast.classList.remove('opacity-100', '-translate-y-2');
+    }, 3200);
+  }
+
+  // Filtrado por categorías
+  const filterChips = document.querySelectorAll('.filter-chip');
+  const templateItems = document.querySelectorAll('.template-item');
+  const searchInput = document.getElementById('search-input');
+  const clearSearch = document.getElementById('clear-search');
+  const noResults = document.getElementById('no-results');
+
+  let activeCategory = 'all';
+
+  function applyFilters() {
+    const query = searchInput.value.toLowerCase().trim();
+    let visibleCount = 0;
+
+    templateItems.forEach(item => {
+      const itemCat = item.getAttribute('data-category');
+      const text = item.textContent.toLowerCase();
+      const matchesCategory = (activeCategory === 'all' || itemCat === activeCategory);
+      const matchesQuery = query === '' || text.includes(query);
+
+      if (matchesCategory && matchesQuery) {
+        item.style.display = 'flex';
+        visibleCount++;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    if (visibleCount === 0) {
+      noResults.classList.remove('hidden');
+      noResults.classList.add('flex');
+    } else {
+      noResults.classList.add('hidden');
+      noResults.classList.remove('flex');
+    }
+  }
+
+  filterChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      filterChips.forEach(c => {
+        c.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        c.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      chip.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      chip.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+
+      activeCategory = chip.getAttribute('data-category');
+      applyFilters();
+    });
+  });
+
+  searchInput.addEventListener('input', (e) => {
+    if (e.target.value.length > 0) {
+      clearSearch.classList.remove('hidden');
+    } else {
+      clearSearch.classList.add('hidden');
+    }
+    applyFilters();
+  });
+
+  clearSearch.addEventListener('click', () => {
+    searchInput.value = '';
+    clearSearch.classList.add('hidden');
+    applyFilters();
+  });
+
+  function resetFilters() {
+    searchInput.value = '';
+    clearSearch.classList.add('hidden');
+    const firstChip = document.querySelector('.filter-chip[data-category="all"]');
+    if (firstChip) firstChip.click();
+  }
+
+  // Botón ZIP del Kit Semestral
+  document.getElementById('btn-zip-download').addEventListener('click', () => {
+    triggerDownload('Kit_Practicas_Pedagogicas_2024_2025.zip');
+  });
+
+  // Cerrar modal al hacer click fuera del panel en tablets/desktop
+  document.getElementById('preview-modal').addEventListener('click', (e) => {
+    if (e.target.id === 'preview-modal') {
+      closePreview();
+    }
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(19,27,46,0.05)]" data-active-classes="text-primary font-bold"><div class="h-16 px-gutter-mobile flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors focus:outline-none" data-path="inicio-panel" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm">Inicio</span></a><a class="relative flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors focus:outline-none" data-path="planeador-editor" href="#"><div class="relative"><span class="material-symbols-outlined text-[22px]">edit_document</span><span class="absolute -top-1 -right-2 px-1 py-0.2 bg-primary text-white text-[9px] font-bold rounded-full leading-tight ring-1 ring-surface">IA</span></div><span class="font-label-sm text-label-sm">Planeador</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors focus:outline-none" data-path="evidencias-aula" href="#"><span class="material-symbols-outlined text-[22px]">photo_library</span><span class="font-label-sm text-label-sm">Evidencias</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors focus:outline-none" data-path="plantillas-diario" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span class="font-label-sm text-label-sm">Diario &amp; Guías</span></a></div></nav></body></html>

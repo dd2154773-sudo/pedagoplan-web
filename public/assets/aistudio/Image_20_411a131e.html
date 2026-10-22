@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "surface-bright": "#faf8ff", "background": "#faf8ff", "on-error": "#ffffff", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "primary-fixed-dim": "#b6c4ff", "on-secondary-fixed-variant": "#005236", "secondary-fixed": "#6ffbbe", "primary-container": "#1e3a8a", "surface-variant": "#dae2fd", "on-primary-fixed-variant": "#264191", "on-primary-container": "#90a8ff", "on-primary-fixed": "#00164e", "surface-container-highest": "#dae2fd", "on-tertiary-fixed": "#2a1700", "outline-variant": "#c5c5d3", "on-secondary-fixed": "#002113", "surface-dim": "#d2d9f4", "secondary-fixed-dim": "#4edea3", "inverse-surface": "#283044", "primary": "#00236f", "on-secondary-container": "#00714d", "on-tertiary-container": "#ef9900", "tertiary": "#3e2400", "tertiary-container": "#5c3800", "surface-tint": "#4059aa", "primary-fixed": "#dce1ff", "secondary": "#006c49", "tertiary-fixed-dim": "#ffb95f", "inverse-primary": "#b6c4ff", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "inverse-on-surface": "#eef0ff", "surface-container-low": "#f2f3ff", "on-surface-variant": "#444651", "on-tertiary-fixed-variant": "#653e00", "secondary-container": "#6cf8bb", "on-background": "#131b2e", "surface-container-high": "#e2e7ff", "surface": "#faf8ff", "on-surface": "#131b2e", "outline": "#757682", "on-primary": "#ffffff", "on-secondary": "#ffffff", "tertiary-fixed": "#ffddb8", "surface-container": "#eaedff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter": "1.25rem", "space-md": "1rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "margin": "2rem" }, "fontFamily": { "title-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, "fontSize": { "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="PedagoPlan Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1Xuc3jjGmQYqB93jzLK5C4l9j6E4JUnjM1rZ7aO7T4kgTEJ5dlgZBfsqQHZnaiyCaVp-jB3g1pozF3PXzsvSoT48y2mncXGNCt0tIhGGJ3ExhQWkC9kNGrEwBUJxp6S--vlWmEspho9wug8ftS1WmwnvKBwdSsaBz4dP-RW2uUlmSrb3tGRAKCGhFzgVwek1g_CaYwMs71WIwAeWT5kB6a7I3YtTyDcZosoNmP5CujwTNO-OLF3yOQpvxef"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5 leading-none"><span class="font-title-md text-title-md text-primary tracking-tight truncate">PedagoPlan</span><span class="text-[10px] text-on-surface-variant font-label-sm font-semibold opacity-60">•</span><span class="font-label-sm text-label-sm text-on-surface-variant font-semibold truncate">Prácticas</span></div><span class="font-label-sm text-label-sm text-outline tracking-normal truncate">Lic. en Pedagogía • Docente en Formación</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notificaciones" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors focus:outline-none"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 bg-error rounded-full ring-2 ring-surface"></span></button><div class="relative flex items-center justify-center pl-1"><img alt="Estudiante de Pedagogía" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_4px_rgba(19,27,46,0.12)] ring-1 ring-surface-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmgABNugxBbh3J_lUI9nDXzOP0OYFz4WZk-TPh-yfsjobvguEP8Vcowfee1f_Bk16oSzOvUX8aoXn117mxIhoAEorxdJTEfqwhuR-0iRfcg5UP2T-0TR7cJN4m9T2I_G1o05FOSckvPp6gBG3sxYwz7NWB13hxcg7YyYQH6xumJzaDDo488OVNYTF7VCa5Gd0097Jk0oAVBWHrFwGcRpLUuuAx8jOijxY4if2k10MX8vShZGcHoGsLQA"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-secondary rounded-full ring-2 ring-surface"></span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Header Contextual & Métricas Rápidas -->
+<section class="px-gutter-mobile pt-space-md pb-space-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<span class="inline-flex items-center gap-1.5 text-secondary font-label-sm text-label-sm tracking-wide uppercase font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+          Portafolio Práctico Oficial
+        </span>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-tight mt-0.5">
+          Evidencias de Aula &amp; Trabajo Infantil
+        </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-outline">school</span>
+          Ciclo 2024-II • 4° Grado B • EP Benito Juárez
+        </p>
+</div>
+<!-- Botón Subir Evidencia -->
+<button class="shrink-0 flex items-center gap-1.5 px-3.5 py-2.5 bg-primary hover:bg-primary-container text-on-primary rounded-xl shadow-md active:scale-95 transition-all focus:outline-none" onclick="document.getElementById('upload-sheet').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[20px]">add_a_photo</span>
+<span class="font-label-md text-label-md hidden sm:inline">+ Subir Evidencia</span>
+<span class="font-label-md text-label-md sm:hidden">+ Subir</span>
+</button>
+</div>
+<!-- Buscador de Aula -->
+<div class="relative w-full mt-1">
+<div class="absolute inset-y-0 left-3.5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full pl-10 pr-10 py-2.5 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:bg-surface-container-lowest focus:shadow-sm focus:outline-none transition-all" placeholder="Buscar por alumno, DUA, contenido o fecha..." type="text"/>
+<button class="absolute inset-y-0 right-2.5 flex items-center text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[19px]">tune</span>
+</button>
+</div>
+<!-- Filtros de Categoría con Contadores -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 pt-1 -mx-gutter-mobile px-gutter-mobile scrollbar-none">
+<button class="filter-chip active shrink-0 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all flex items-center gap-1.5">
+<span>Todas</span>
+<span class="bg-primary-container/80 text-on-primary text-[10px] px-1.5 py-0.2 rounded-full font-bold">24</span>
+</button>
+<button class="filter-chip shrink-0 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-highest transition-all flex items-center gap-1.5">
+<span>Trabajos de Alumnos</span>
+<span class="bg-surface-variant text-on-surface-variant text-[10px] px-1.5 py-0.2 rounded-full font-semibold">14</span>
+</button>
+<button class="filter-chip shrink-0 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-highest transition-all flex items-center gap-1.5">
+<span>Dinámicas Áulicas</span>
+<span class="bg-surface-variant text-on-surface-variant text-[10px] px-1.5 py-0.2 rounded-full font-semibold">6</span>
+</button>
+<button class="filter-chip shrink-0 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-highest transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">diversity_3</span>
+<span>Adecuaciones DUA</span>
+<span class="bg-surface-variant text-on-surface-variant text-[10px] px-1.5 py-0.2 rounded-full font-semibold">4</span>
+</button>
+</div>
+</section>
+<!-- Muro de Evidencias Pedagógicas -->
+<section class="px-gutter-mobile py-space-sm flex flex-col gap-4">
+<!-- Mini Banner / Indicador de Cumplimiento de Portafolio -->
+<div class="p-3.5 bg-surface-container-low rounded-xl flex items-center justify-between gap-3 shadow-sm">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Avance de Recolección Práctica</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">8 de 10 evidencias requeridas para Semana 6</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-md text-label-md text-secondary font-bold">80%</span>
+</div>
+</div>
+<!-- TARJETA 1: DUA / Cuaderno con Texturas (Destacada) -->
+<article class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden transition-transform duration-200 hover:-translate-y-0.5 flex flex-col">
+<!-- Media Header con etiquetas superpuestas -->
+<div class="relative w-full h-52 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up photograph of a primary school student notebook featuring a creative water cycle diagram crafted with textured cotton, blue cellophane, and dual-language tactile labels. Soft natural classroom lighting illuminating pencil handwritten annotations and yellow paper cutouts in clean pedagogical aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1gdAlN-GHOxF2Wg0CRuFVIcSTB0UNya0vW4CSSOt7Y8Mu5h_G-WQyeyHV61W522zS7RLgg_V5OfjhZLa17tDE0va1QIbVbXy_lT5iLf1NL_193P0jm4SiRmR8lqZHPY-007NMdtvjgX5LW1kzK1wxR1i1z9pYxRNO3YbC4uS01PJaR5MR1chsZlYZLeGVHCs5AcEO1TyNgU3cFQnj4V4TO6F6m7qkuUUYsQh2Yxj-latBoJNu3GXHdQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-black/20"></div>
+<!-- Badges Superiores -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest/95 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+            Adecuación Curricular / DUA
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">lock</span>
+            Anonimizado
+          </span>
+</div>
+<!-- Tag de Sesión en Foto -->
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 text-on-primary">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">science</span>
+<span class="font-label-md text-label-md text-on-primary font-semibold">Ciencias Naturales • 4° B</span>
+</div>
+</div>
+<!-- Contenido Pedagógico -->
+<div class="p-4 flex flex-col gap-2.5">
+<div class="flex items-start justify-between gap-2">
+<h2 class="font-title-lg text-title-lg text-on-surface tracking-tight leading-snug">
+            Esquema adaptado de evaporación - Alumno M.S.
+          </h2>
+<span class="shrink-0 font-label-sm text-label-sm text-outline pt-0.5">Ayer, 11:30 AM</span>
+</div>
+<!-- Nota Pedagógica Contextual -->
+<div class="p-3 rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">psychology_alt</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">Nota Reflexiva</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            “Se implementó código de color y texturas táctiles para facilitar la asimilación conceptual. Excelente respuesta en concentración y retención durante la fase plenaria.”
+          </p>
+</div>
+<!-- Footer Card con Acciones -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-[15px]">check_circle</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Revisado por Tutoría</span>
+</div>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md transition-colors" onclick="openDetailModal()">
+<span>Ver Ficha</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- TARJETA 2: Dinámica de Aula & Socioemocional -->
+<article class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col">
+<div class="relative w-full h-48 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A warm classroom circle time setting on a soft green carpet with students arranged in a mindful listening circle around a handcrafted colorful emotions traffic light chart. Bright cheerful classroom with wooden cubbies, educational posters, and student drawings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWeoPigHp4IV00MvrabE9rL8DP0IYJeeSK-gkI1KRtYqqL63ekxlP_ZwkhJm_bVlKakjcXRnmoud5B_b0E6DRQrRgw1Xcx0eNTmvrv2y26tOFhq0-RdI2C-rZI9T6SJhXxZswWSZg4PJ7_J9PL-gkAF3ld6j9OxZ-geh3ziFmxBcfOxVGaPlv_ShBu5rIcxSkutiYCBe9GWFyO2NzaMYnYK_BEQYJBTMhGgxWpnwMRyImF3HrBSz4rzA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-black/20"></div>
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/95 text-on-secondary-container font-label-sm text-label-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-[14px]">volunteer_activism</span>
+            Clima de Aula &amp; Convivencia
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">groups</span>
+            Grupo Total
+          </span>
+</div>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 text-on-primary">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">self_improvement</span>
+<span class="font-label-md text-label-md text-on-primary font-semibold">Tutoría &amp; Socioemocional</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2.5">
+<div class="flex items-start justify-between gap-2">
+<h2 class="font-title-lg text-title-lg text-on-surface tracking-tight leading-snug">
+            Pausa socioemocional previa a matemáticas
+          </h2>
+<span class="shrink-0 font-label-sm text-label-sm text-outline pt-0.5">23 Oct • 09:15 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Resolución asertiva de conflicto entre subgrupos de trabajo cooperativo utilizando el termómetro de estados anímicos infantiles.
+        </p>
+<!-- Feedback del Tutor Directo -->
+<div class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low">
+<div class="w-7 h-7 rounded-full bg-secondary flex items-center justify-center text-on-secondary shrink-0 font-bold text-[11px]">
+            CF
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1 truncate">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+              Vo.Bo. Mtro. Carlos Fuentes (Supervisor)
+            </span>
+<span class="font-body-sm text-[12px] text-on-surface-variant truncate">“Estrategia pertinente y calmada. Continúa documentando.”</span>
+</div>
+</div>
+</div>
+</article>
+<!-- TARJETA 3: Evaluación Formativa (Rúbrica Niños) -->
+<article class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col">
+<div class="relative w-full h-44 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Overhead aesthetic angle of an authentic formative assessment worksheet filled by a child with colorful smiley face rubrics, self-assessment stickers, and friendly hand-drawn stars evaluating shared reading fluency in a supportive school environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANLM6DxFavFyQEnipyVxkesEWvzLvj6lMikuxM7f5FsNccg_BwTjXfB0Ku7xxbw93Sj5VUnFQRsCXdYcgeWZVpM7xNomziIp2VJ5_RtmAaNqeQBVgBZV5_Efv21hS6ItUCA91RWx0GDU5Nzc81Iw16npBjQzKz7aHPs82DN6f88Qn2X13I_W1cZafrSjv4EThlE9ovop_umzpXCRv9llwOuhprVt3rbhZcoaftFdU24Y0xCeArTu2d7g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-black/20"></div>
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-[14px]">fact_check</span>
+            Evaluación Formativa
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-primary">auto_stories</span>
+            Español
+          </span>
+</div>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 text-on-primary">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">format_list_bulleted</span>
+<span class="font-label-md text-label-md text-on-primary font-semibold">Comprensión Lectora</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<h2 class="font-title-lg text-title-lg text-on-surface tracking-tight leading-snug">
+            Autoevaluación de lectura compartida
+          </h2>
+<span class="shrink-0 font-label-sm text-label-sm text-outline pt-0.5">21 Oct</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Rúbrica visual con caritas pedagógicas para metacognición infantil. Los alumnos identificaron con honestidad sus momentos de duda.
+        </p>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-sm text-label-sm text-outline">18 cuestionarios digitalizados</span>
+<button class="text-primary hover:text-primary-container font-label-md text-label-md font-bold flex items-center gap-0.5" onclick="openDetailModal()">
+            Detalles <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+</section>
+<!-- MODAL / FICHA EXPANDIDA DE VISTA DETALLADA -->
+<div class="hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-primary/40 backdrop-blur-sm transition-opacity duration-300" id="detail-modal">
+<div class="w-full sm:max-w-xl max-h-[795px] bg-surface-container-lowest rounded-t-3xl sm:rounded-3xl shadow-xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-6 duration-300">
+<!-- Barra Superior de Control del Modal -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">Ficha de Análisis Docente</span>
+<p class="font-title-md text-title-md text-on-surface">Evidencia #EV-048</p>
+</div>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-primary transition-colors focus:outline-none" onclick="closeDetailModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Contenedor Scrollable del Detalle -->
+<div class="overflow-y-auto p-4 flex flex-col gap-4">
+<!-- Imagen Ampliada de la Evidencia -->
+<div class="relative w-full h-56 rounded-2xl overflow-hidden bg-surface-container-high shadow-inner">
+<img class="w-full h-full object-cover" data-alt="High-resolution collaborative classroom mural created on craft paper by Mexican 4th-grade elementary children depicting regional native flora, cactus, and hand-written environmental preservation pledges with colorful markers, pressed leaves, and vibrant cardboard collages." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjueoYRlYeko56nsx2Ek9IWzlu8EHALtDbpqNimj5FfLcBXQTqkFi1Bw-ylmEdkJLHo7Dsen3TVqnkcueq918YDPYHqwanm4Wa9ElxdKr-53QuasTOdFAIjAiPasIEqFPsxi_8GWJtZFAfH3GTirAsVLYcE5kJCPZBk68nrSTYzzgV8Fv32_TacIHYoMHSkw2jdp_OY9pyMip5ZrAV5iPX1M9d-fggP5fAMUKpl3hqCJ2KP_r5SeLrLQ"/>
+<div class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full text-[11px] text-white flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[13px]">zoom_in</span>
+            Tocar para zoom HD
+          </div>
+</div>
+<div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold mb-1.5">
+            ABP • Aprendizaje Basado en Proyectos
+          </span>
+<h3 class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-tight">
+            Lámina cooperativa: Flora nativa y cuidado ambiental
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            4° Grado Grupo B • Trabajo en equipos heterogéneos de 5 alumnos.
+          </p>
+</div>
+<!-- Fichas Pedagógicas Estructuradas -->
+<div class="flex flex-col gap-3">
+<!-- 1. Justificación Teórica -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[17px]">history_edu</span>
+<h4 class="font-label-md text-label-md font-bold text-primary">Justificación Teórico-Pedagógica</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              “Fundamentado en el marco del <strong>aprendizaje situado (Frida Díaz Barriga)</strong> y la pedagogía crítica comunitaria. Se trascendió la memorización enciclopédica hacia la exploración del entorno ecológico inmediato del alumnado.”
+            </p>
+</div>
+<!-- 2. Hallazgos del Practicante -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[17px]">lightbulb</span>
+<h4 class="font-label-md text-label-md font-bold text-secondary">Hallazgos &amp; Reflexión en Acción</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Los alumnos reconocieron espontáneamente especies locales de su comunidad antes que los ejemplos genéricos del libro de texto oficial. Se generó pertenencia territorial y diálogo intercultural.
+            </p>
+</div>
+<!-- 3. Devolución del Supervisor Tutor -->
+<div class="p-3.5 rounded-xl bg-surface-container-high flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[17px] text-primary">rate_review</span>
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Recomendación del Asesor Universitario</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              “Excelente vinculación territorial y articulación curricular. Sugiero adjuntar este producto tangible al <em>Informe Final de Titulación</em> como testimonio de competencia docente reflexiva.”
+            </p>
+<div class="flex items-center justify-between pt-1 text-[11px] text-outline font-semibold">
+<span>Dr. M. Villalobos • Asesor de Práctica</span>
+<span>Validado con firma digital ✓</span>
+</div>
+</div>
+</div>
+<!-- Acciones Clave del Practicante -->
+<div class="flex flex-col gap-2 pt-2">
+<div class="grid grid-cols-2 gap-2">
+<button class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+              Descargar HD (3.4 MB)
+            </button>
+<button class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-[18px] text-secondary">share</span>
+              Compartir con Tutor
+            </button>
+</div>
+<button class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-title-md text-title-md shadow-md active:scale-98 transition-all">
+<span class="material-symbols-outlined text-[20px]">post_add</span>
+            Adjuntar a Planeación Didáctica #4
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- MODAL / BOTTOM SHEET DE SUBIDA RÁPIDA DE EVIDENCIA -->
+<div class="hidden fixed inset-0 z-50 flex items-end justify-center bg-primary/40 backdrop-blur-sm" id="upload-sheet">
+<div class="w-full sm:max-w-md bg-surface-container-lowest rounded-t-3xl p-5 shadow-2xl flex flex-col gap-4 animate-in slide-in-from-bottom-8">
+<div class="flex items-center justify-between pb-2">
+<div class="flex flex-col">
+<span class="font-title-lg text-title-lg text-primary">Registrar Nueva Evidencia</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Captura directa con anonimización de menores</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline" onclick="document.getElementById('upload-sheet').classList.add('hidden')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Opciones Rápidas de Captura -->
+<div class="grid grid-cols-2 gap-3">
+<button class="p-4 rounded-2xl bg-surface-container-low hover:bg-surface-container flex flex-col items-center justify-center gap-2 transition-all">
+<div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">document_scanner</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Escanear Cuaderno</span>
+<span class="font-label-sm text-label-sm text-outline text-center">Filtro de mejora de tinta</span>
+</button>
+<button class="p-4 rounded-2xl bg-surface-container-low hover:bg-surface-container flex flex-col items-center justify-center gap-2 transition-all">
+<div class="w-12 h-12 rounded-full bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">photo_camera</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Foto de Aula</span>
+<span class="font-label-sm text-label-sm text-outline text-center">Desenfoque facial auto</span>
+</button>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">verified_user</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-relaxed">
+<strong>Protección de Datos Escolares:</strong> El sistema aplica automáticamente máscaras de desenfoque a rostros infantiles y nombres completos para respetar la confidencialidad de la práctica.
+        </p>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-surface-container text-on-surface-variant font-label-md text-label-md" onclick="document.getElementById('upload-sheet').classList.add('hidden')">
+        Cancelar
+      </button>
+</div>
+</div>
+</div>
+<script>
+  function openDetailModal() {
+    const modal = document.getElementById('detail-modal');
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDetailModal() {
+    const modal = document.getElementById('detail-modal');
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  // Interacción en chips de filtro
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('.filter-chip').forEach(c => {
+        c.classList.remove('bg-primary', 'text-on-primary');
+        c.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+      });
+      this.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+      this.classList.add('bg-primary', 'text-on-primary');
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(19,27,46,0.05)]" data-active-classes="text-primary font-bold"><div class="h-16 px-gutter-mobile flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors focus:outline-none" data-path="inicio-panel" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm">Inicio</span></a><a class="relative flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors focus:outline-none" data-path="planeador-editor" href="#"><div class="relative"><span class="material-symbols-outlined text-[22px]">edit_document</span><span class="absolute -top-1 -right-2 px-1 py-0.2 bg-primary text-white text-[9px] font-bold rounded-full leading-tight ring-1 ring-surface">IA</span></div><span class="font-label-sm text-label-sm">Planeador</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors focus:outline-none" data-path="evidencias-aula" href="#"><span class="material-symbols-outlined text-[22px]">photo_library</span><span class="font-label-sm text-label-sm">Evidencias</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors focus:outline-none" data-path="plantillas-diario" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span class="font-label-sm text-label-sm">Diario &amp; Guías</span></a></div></nav></body></html>

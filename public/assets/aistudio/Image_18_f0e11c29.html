@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "surface-bright": "#faf8ff", "background": "#faf8ff", "on-error": "#ffffff", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "primary-fixed-dim": "#b6c4ff", "on-secondary-fixed-variant": "#005236", "secondary-fixed": "#6ffbbe", "primary-container": "#1e3a8a", "surface-variant": "#dae2fd", "on-primary-fixed-variant": "#264191", "on-primary-container": "#90a8ff", "on-primary-fixed": "#00164e", "surface-container-highest": "#dae2fd", "on-tertiary-fixed": "#2a1700", "outline-variant": "#c5c5d3", "on-secondary-fixed": "#002113", "surface-dim": "#d2d9f4", "secondary-fixed-dim": "#4edea3", "inverse-surface": "#283044", "primary": "#00236f", "on-secondary-container": "#00714d", "on-tertiary-container": "#ef9900", "tertiary": "#3e2400", "tertiary-container": "#5c3800", "surface-tint": "#4059aa", "primary-fixed": "#dce1ff", "secondary": "#006c49", "tertiary-fixed-dim": "#ffb95f", "inverse-primary": "#b6c4ff", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "inverse-on-surface": "#eef0ff", "surface-container-low": "#f2f3ff", "on-surface-variant": "#444651", "on-tertiary-fixed-variant": "#653e00", "secondary-container": "#6cf8bb", "on-background": "#131b2e", "surface-container-high": "#e2e7ff", "surface": "#faf8ff", "on-surface": "#131b2e", "outline": "#757682", "on-primary": "#ffffff", "on-secondary": "#ffffff", "tertiary-fixed": "#ffddb8", "surface-container": "#eaedff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter": "1.25rem", "space-md": "1rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "margin": "2rem" }, "fontFamily": { "title-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, "fontSize": { "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="PedagoPlan Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1Xuc3jjGmQYqB93jzLK5C4l9j6E4JUnjM1rZ7aO7T4kgTEJ5dlgZBfsqQHZnaiyCaVp-jB3g1pozF3PXzsvSoT48y2mncXGNCt0tIhGGJ3ExhQWkC9kNGrEwBUJxp6S--vlWmEspho9wug8ftS1WmwnvKBwdSsaBz4dP-RW2uUlmSrb3tGRAKCGhFzgVwek1g_CaYwMs71WIwAeWT5kB6a7I3YtTyDcZosoNmP5CujwTNO-OLF3yOQpvxef"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5 leading-none"><span class="font-title-md text-title-md text-primary tracking-tight truncate">PedagoPlan</span><span class="text-[10px] text-on-surface-variant font-label-sm font-semibold opacity-60">•</span><span class="font-label-sm text-label-sm text-on-surface-variant font-semibold truncate">Prácticas</span></div><span class="font-label-sm text-label-sm text-outline tracking-normal truncate">Lic. en Pedagogía • Docente en Formación</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notificaciones" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors focus:outline-none"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 bg-error rounded-full ring-2 ring-surface"></span></button><div class="relative flex items-center justify-center pl-1"><img alt="Estudiante de Pedagogía" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_4px_rgba(19,27,46,0.12)] ring-1 ring-surface-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmgABNugxBbh3J_lUI9nDXzOP0OYFz4WZk-TPh-yfsjobvguEP8Vcowfee1f_Bk16oSzOvUX8aoXn117mxIhoAEorxdJTEfqwhuR-0iRfcg5UP2T-0TR7cJN4m9T2I_G1o05FOSckvPp6gBG3sxYwz7NWB13hxcg7YyYQH6xumJzaDDo488OVNYTF7VCa5Gd0097Jk0oAVBWHrFwGcRpLUuuAx8jOijxY4if2k10MX8vShZGcHoGsLQA"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-secondary rounded-full ring-2 ring-surface"></span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter-mobile py-space-md gap-space-lg">
+<!-- Header & Context Banner -->
+<section class="flex flex-col gap-space-xs bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2 min-w-0">
+<span class="p-1.5 rounded-lg bg-surface-container text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">assignment</span>
+</span>
+<div class="min-w-0">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface truncate">Nueva Planeación Didáctica</h1>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Borrador auto-guardado • Hace 2 min</span>
+</div>
+</div>
+</div>
+<button aria-label="Historial de versiones" class="px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md flex items-center gap-1 shrink-0 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span class="hidden sm:inline">v2.4</span>
+</button>
+</div>
+<!-- Stepper / Wizard interactivo -->
+<div class="mt-space-md pt-space-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Fase de Elaboración</span>
+<span class="font-label-md text-label-md text-primary font-bold">Paso 3 de 4 (75%)</span>
+</div>
+<!-- Timeline visual -->
+<div class="grid grid-cols-4 gap-1.5">
+<!-- Paso 1 -->
+<div class="flex flex-col gap-1.5">
+<div class="h-2 rounded-full bg-secondary transition-all"></div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">check_circle</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold truncate">1. Datos</span>
+</div>
+</div>
+<!-- Paso 2 -->
+<div class="flex flex-col gap-1.5">
+<div class="h-2 rounded-full bg-secondary transition-all"></div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">check_circle</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold truncate">2. Metas</span>
+</div>
+</div>
+<!-- Paso 3: Activo -->
+<div class="flex flex-col gap-1.5">
+<div class="h-2 rounded-full bg-primary-container relative">
+<span class="absolute right-0 -top-1 w-4 h-4 rounded-full bg-primary flex items-center justify-center text-on-primary text-[9px] font-bold shadow-sm">3</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-primary font-bold truncate">3. Secuencia</span>
+</div>
+</div>
+<!-- Paso 4 -->
+<div class="flex flex-col gap-1.5">
+<div class="h-2 rounded-full bg-surface-container-high"></div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-outline text-[14px]">radio_button_unchecked</span>
+<span class="font-label-sm text-label-sm text-outline truncate">4. DUA</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Curricular Context Pill Card -->
+<section class="bg-gradient-to-r from-primary/10 via-surface-container to-surface-container-low p-space-md rounded-xl shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-sm">4° Primaria</span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">Ciencias Naturales</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>90 min lectivos</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">water_drop</span>
+<p class="font-title-md text-title-md text-on-surface font-semibold leading-tight">
+        "El ciclo del agua y sustentabilidad local: Guardianes del líquido vital"
+      </p>
+</div>
+</section>
+<!-- Formulario Secuencia Didáctica (Paso 3) -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold">Estructura Secuencial (NEM)</h2>
+<button class="text-primary font-label-md text-label-md flex items-center gap-0.5 active:opacity-75" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+        Vista Completa
+      </button>
+</div>
+<!-- Fase 1: Inicio -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex flex-col gap-space-sm">
+<div class="flex items-center justify-between gap-2 pb-2">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-bold font-label-md text-label-md">F1</span>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Momento de Inicio</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Activación de saberes previos</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">timer</span> 15 min
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+            Grupal
+          </span>
+</div>
+</div>
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold flex items-center justify-between" for="fase-inicio-input">
+<span>Pregunta detonadora y lluvia de ideas</span>
+<span class="text-on-surface-variant text-[11px] font-normal">Obligatorio</span>
+</label>
+<div class="relative">
+<textarea class="w-full bg-surface-container-low rounded-lg p-space-sm text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all placeholder:text-outline resize-none" id="fase-inicio-input" placeholder="Escribe el planteamiento inicial..." rows="3">¿A dónde va el agua de los charcos después de llover? Lluvia de ideas colectiva mediante 'tarjetas de nubes' en pizarrón magnético y categorización de conceptos.</textarea>
+<div class="absolute right-2 bottom-2 flex items-center gap-1">
+<button class="w-7 h-7 rounded-full bg-surface-container-highest text-primary flex items-center justify-center hover:bg-primary-fixed transition-colors" title="Expandir con IA" type="button">
+<span class="material-symbols-outlined text-[16px]">magic_button</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Intención pedagógica: Vinculación empírica con su entorno inmediato.</span>
+</div>
+</div>
+<!-- Fase 2: Desarrollo -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex flex-col gap-space-sm">
+<div class="flex items-center justify-between gap-2 pb-2">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-bold font-label-md text-label-md">F2</span>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Momento de Desarrollo</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Construcción activa &amp; experimentación</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">timer</span> 50 min
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-variant text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">
+            Equipos (4)
+          </span>
+</div>
+</div>
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="fase-desarrollo-input">Actividad Experimental Guiada</label>
+<textarea class="w-full bg-surface-container-low rounded-lg p-space-sm text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all placeholder:text-outline resize-none" id="fase-desarrollo-input" rows="4">Montaje de mini-terrario cerrado (eco-ciclo): Los alumnos depositan tierra vegetal húmeda, semillas de chía y un vaso pequeño con agua con pigmento azul en una botella PET sellada expuesta al sol en la jardinera escolar, registrando la formación de rocío y condensación.</textarea>
+</div>
+<!-- Recurso y Materiales Tags -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">inventory_2</span>
+            Materiales requeridos
+          </span>
+<button class="text-primary font-label-sm text-label-sm font-bold" type="button">+ Agregar</button>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest text-on-surface font-body-sm text-body-sm flex items-center gap-1 shadow-sm">
+            Botellas PET (1L) <span class="material-symbols-outlined text-[12px] text-outline cursor-pointer">close</span>
+</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest text-on-surface font-body-sm text-body-sm flex items-center gap-1 shadow-sm">
+            Tierra vegetal <span class="material-symbols-outlined text-[12px] text-outline cursor-pointer">close</span>
+</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest text-on-surface font-body-sm text-body-sm flex items-center gap-1 shadow-sm">
+            Agua con colorante vegetal <span class="material-symbols-outlined text-[12px] text-outline cursor-pointer">close</span>
+</span>
+</div>
+</div>
+<!-- Foto de referencia pedagógica de la actividad -->
+<div class="relative rounded-lg overflow-hidden h-36 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close-up photograph of fourth-grade elementary students gathered around a classroom laboratory table carefully assembling small closed terrariums in recycled plastic bottles. Gentle natural classroom sunlight illuminates moisture condensation on the transparent bottle walls, soft educational atmosphere with green chalkboard and handwritten science notes in the background, deep academic blue and emerald accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABl8GOyCwYER9ydU5GSLIuKiSu9nUDr1Vf-2xY348oddX-TDr3g4UX_-i-aguawBuXMMit6Hfg3eA8JXQLxO8tPH71qTNXW9MMY-50WSWFrY2FR1n1X-h6NyF-9Ob9bpJIILB4MdJL4mRk_7Owngu0grhFUwjbN7bh1s-bB9pdcCe9Q1yMs8JBLzpmgSDTW2gb3Xod9_3DRL75fPQOCSBtt1gNJ9DFFGlshXoNtx9IyMiyQjdKTZzuLg"/>
+<div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-primary/80 to-transparent p-2 flex items-center justify-between">
+<span class="text-on-primary font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[15px]">image</span> Ejemplo de montaje de terrario
+          </span>
+<span class="text-on-primary font-label-sm text-label-sm underline cursor-pointer">Ver guía técnica</span>
+</div>
+</div>
+</div>
+<!-- Fase 3: Cierre -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex flex-col gap-space-sm">
+<div class="flex items-center justify-between gap-2 pb-2">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-bold font-label-md text-label-md">F3</span>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Momento de Cierre</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Socialización, síntesis y metacognición</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">timer</span> 25 min
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+            Plenario
+          </span>
+</div>
+</div>
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="fase-cierre-input">Socialización y Registro Reflexivo</label>
+<textarea class="w-full bg-surface-container-low rounded-lg p-space-sm text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all placeholder:text-outline resize-none" id="fase-cierre-input" rows="3">Plenaria dialogada: Registro visual del ciclo en el 'Diario del Pequeño Naturalista'. Preguntas guía: ¿Qué aprendimos sobre la evaporación? Formulación del compromiso escolar para el cuidado del agua.</textarea>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low px-space-sm py-2 rounded-lg">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">fact_check</span>
+<span class="font-label-md text-label-md text-on-surface truncate font-semibold">Instrumento: Lista de cotejo formativa</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Configurado</span>
+</div>
+</div>
+</section>
+<!-- Panel Flotante / Drawer del Asistente IA Pedagógico -->
+<section class="bg-gradient-to-b from-surface-container-lowest to-surface-container-low rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<!-- Header Asistente con Selector de Motor -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-primary font-bold">Copiloto Pedagógico IA</span>
+<span class="px-1.5 py-0.2 bg-secondary text-on-secondary text-[10px] font-bold rounded">ACTIVO</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Alineado al Marco Curricular Común y DUA</p>
+</div>
+</div>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container text-on-surface-variant hover:text-primary transition-colors" id="toggle-ia-drawer" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+<!-- Selector de Motor IA (Gemini 1.5 vs Groq Llama 3.3) -->
+<div class="grid grid-cols-2 gap-2 mt-1 bg-surface-container p-1 rounded-xl">
+<button class="flex flex-col items-start p-2 rounded-lg bg-surface-container-lowest text-primary shadow-sm transition-all text-left" id="btn-engine-gemini" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">psychology</span>
+              Gemini 1.5 Pro
+            </span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] mt-0.5 truncate w-full">Enfoque NEM &amp; Sintético</span>
+</button>
+<button class="flex flex-col items-start p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-lowest/50 transition-all text-left" id="btn-engine-groq" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+              Groq LPU
+            </span>
+<span class="px-1 py-0.2 rounded bg-secondary-container text-on-secondary-container text-[9px] font-bold">300 t/s</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] mt-0.5 truncate w-full">Llama 3.3 Instantáneo</span>
+</button>
+</div>
+</div>
+<!-- Sugerencia contextual en vivo -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 transition-all flex flex-col gap-2" id="ai-suggestion-box">
+<div class="flex items-start gap-2">
+<span class="text-tertiary-container mt-0.5 flex shrink-0">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+</span>
+<div class="flex-1 min-w-0">
+<p class="font-label-md text-label-md text-primary font-bold">Sugerencia para Momento de Desarrollo:</p>
+<p class="font-body-sm text-body-sm text-on-surface mt-1 leading-snug">
+            "Te sugiero integrar una analogía con la tala y deforestación en la micro-cuenca vecina a la primaria. Reforzará el PDA socioformativo al conectar el ciclo hidrológico con la problemática de sequía comunitaria."
+          </p>
+</div>
+</div>
+<!-- Action chips -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<button class="px-2.5 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1 active:scale-95 transition-transform shadow-sm" id="btn-apply-suggestion" type="button">
+<span class="material-symbols-outlined text-[14px]">add_circle</span>
+          + Insertar actividad sugerida
+        </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold flex items-center gap-1 active:scale-95 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[14px] text-secondary">diversity_3</span>
+          ✨ Adaptar DUA (TDAH)
+        </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1 active:scale-95 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[14px]">psychology_alt</span>
+          🎯 Pregunta metacognitiva
+        </button>
+</div>
+</div>
+<!-- Prompt Bar Input -->
+<div class="flex items-center gap-2 bg-surface-container-lowest p-1.5 rounded-xl shadow-inner">
+<span class="material-symbols-outlined text-outline pl-2 text-[20px]">auto_awesome</span>
+<input class="flex-1 bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none placeholder:text-outline py-1" id="custom-ai-prompt" placeholder="Pídele a la IA ajustar la dificultad o sugerir recursos..." type="text"/>
+<button aria-label="Enviar prompt a IA" class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shrink-0 active:scale-95 transition-transform" id="send-ai-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</section>
+<!-- Barra de Acciones Principales y Exportación -->
+<section class="flex flex-col gap-2 pt-space-xs pb-space-sm">
+<!-- Botón Primario: Exportar -->
+<div class="relative w-full">
+<button class="w-full py-3.5 px-space-md rounded-xl bg-primary text-on-primary font-title-md text-title-md font-bold flex items-center justify-between shadow-md active:scale-[0.99] transition-transform" id="btn-export-main" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px]">download_for_offline</span>
+<span>Exportar Planeación Completa</span>
+</div>
+<div class="flex items-center gap-1 bg-white/20 px-2 py-0.5 rounded-lg text-label-sm font-semibold">
+<span>PDF / .docx</span>
+<span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+</div>
+</button>
+<!-- Dropdown Flotante Formatos Oficiales (Oculto por defecto) -->
+<div class="hidden absolute bottom-full mb-2 inset-x-0 bg-surface-container-lowest rounded-xl p-space-sm shadow-xl flex flex-col gap-1 z-20" id="export-dropdown">
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2 py-1 font-bold">FORMATOS NORMALIZADOS SEP / UNIVERSIDAD</span>
+<button class="w-full text-left p-2 rounded-lg hover:bg-surface-container font-label-md text-label-md text-on-surface flex items-center justify-between" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[18px]">picture_as_pdf</span>
+<span>Formato Institucional SEP NEM (.PDF)</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Oficial</span>
+</button>
+<button class="w-full text-left p-2 rounded-lg hover:bg-surface-container font-label-md text-label-md text-on-surface flex items-center justify-between" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">description</span>
+<span>Plantilla Docente Editable (.DOCX)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Editable</span>
+</button>
+<button class="w-full text-left p-2 rounded-lg hover:bg-surface-container font-label-md text-label-md text-on-surface flex items-center justify-between" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">table_view</span>
+<span>Matriz Curricular de Evaluación</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rubricas</span>
+</button>
+</div>
+</div>
+<!-- Botón Secundario: Guardar y Enviar a Tutor -->
+<button class="w-full py-3 px-space-md rounded-xl bg-surface-container text-primary font-title-md text-title-md font-semibold flex items-center justify-center gap-2 shadow-sm active:bg-surface-container-high transition-colors" id="btn-submit-tutor" type="button">
+<span class="material-symbols-outlined text-[20px]">send_and_archive</span>
+<span>Guardar y Enviar a Revisión de Tutor</span>
+</button>
+</section>
+<!-- Feedback Toast Notifier (Animado con JS) -->
+<div class="fixed bottom-20 inset-x-4 bg-inverse-surface text-inverse-on-surface p-3 rounded-xl shadow-2xl flex items-center justify-between transition-all duration-300 opacity-0 pointer-events-none translate-y-4 z-50" id="status-toast">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium" id="toast-message">Contenido sincronizado con éxito.</span>
+</div>
+<button class="text-inverse-on-surface/70 hover:text-inverse-on-surface" onclick="document.getElementById('status-toast').classList.add('opacity-0', 'pointer-events-none', 'translate-y-4')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<script>
+  (function() {
+    // Dropdown toggle
+    const exportBtn = document.getElementById('btn-export-main');
+    const exportDropdown = document.getElementById('export-dropdown');
+    
+    if (exportBtn && exportDropdown) {
+      exportBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        exportDropdown.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!exportDropdown.contains(e.target) && !exportBtn.contains(e.target)) {
+          exportDropdown.classList.add('hidden');
+        }
+      });
+    }
+
+    // Engine switchers
+    const btnGemini = document.getElementById('btn-engine-gemini');
+    const btnGroq = document.getElementById('btn-engine-groq');
+    
+    function setEngine(selected, unselected) {
+      selected.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      selected.classList.remove('text-on-surface-variant');
+      unselected.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      unselected.classList.add('text-on-surface-variant');
+    }
+
+    if (btnGemini && btnGroq) {
+      btnGemini.addEventListener('click', () => {
+        setEngine(btnGemini, btnGroq);
+        showToast("Motor activado: Gemini 1.5 Pro (Alineación NEM)");
+      });
+
+      btnGroq.addEventListener('click', () => {
+        setEngine(btnGroq, btnGemini);
+        showToast("Motor activado: Groq LPU (300 tokens/segundo)");
+      });
+    }
+
+    // Insert AI Suggestion into development text
+    const btnApply = document.getElementById('btn-apply-suggestion');
+    const devInput = document.getElementById('fase-desarrollo-input');
+    
+    if (btnApply && devInput) {
+      btnApply.addEventListener('click', () => {
+        const addition = "\n\n[Vinculación Socioformativa NEM]: Análisis visual de la deforestación en la micro-cuenca cercana y su impacto directo en la reducción de precipitaciones y manantiales locales.";
+        if (!devInput.value.includes("Vinculación Socioformativa")) {
+          devInput.value += addition;
+          showToast("✨ Actividad sugerida insertada con éxito.");
+        } else {
+          showToast("La sugerencia ya se encuentra incorporada.");
+        }
+      });
+    }
+
+    // Submit tutor
+    const btnTutor = document.getElementById('btn-submit-tutor');
+    if (btnTutor) {
+      btnTutor.addEventListener('click', () => {
+        showToast("📨 Planeación enviada al Dr. Morales para revisión académica.");
+      });
+    }
+
+    // AI custom prompt simulate
+    const sendAiBtn = document.getElementById('send-ai-btn');
+    const customPrompt = document.getElementById('custom-ai-prompt');
+    if (sendAiBtn && customPrompt) {
+      sendAiBtn.addEventListener('click', () => {
+        if (customPrompt.value.trim() !== '') {
+          showToast("🤖 Procesando solicitud con IA didáctica...");
+          customPrompt.value = '';
+        }
+      });
+    }
+
+    // Toast helper
+    function showToast(msg) {
+      const toast = document.getElementById('status-toast');
+      const toastMsg = document.getElementById('toast-message');
+      if (toast && toastMsg) {
+        toastMsg.textContent = msg;
+        toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+        setTimeout(() => {
+          toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+        }, 3200);
+      }
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(19,27,46,0.05)]" data-active-classes="text-primary font-bold"><div class="h-16 px-gutter-mobile flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors focus:outline-none" data-path="inicio-panel" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm">Inicio</span></a><a class="relative flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors focus:outline-none" data-path="planeador-editor" href="#"><div class="relative"><span class="material-symbols-outlined text-[22px]">edit_document</span><span class="absolute -top-1 -right-2 px-1 py-0.2 bg-primary text-white text-[9px] font-bold rounded-full leading-tight ring-1 ring-surface">IA</span></div><span class="font-label-sm text-label-sm">Planeador</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors focus:outline-none" data-path="evidencias-aula" href="#"><span class="material-symbols-outlined text-[22px]">photo_library</span><span class="font-label-sm text-label-sm">Evidencias</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors focus:outline-none" data-path="plantillas-diario" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span class="font-label-sm text-label-sm">Diario &amp; Guías</span></a></div></nav></body></html>

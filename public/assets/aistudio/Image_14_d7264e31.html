@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "surface-bright": "#faf8ff", "background": "#faf8ff", "on-error": "#ffffff", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "primary-fixed-dim": "#b6c4ff", "on-secondary-fixed-variant": "#005236", "secondary-fixed": "#6ffbbe", "primary-container": "#1e3a8a", "surface-variant": "#dae2fd", "on-primary-fixed-variant": "#264191", "on-primary-container": "#90a8ff", "on-primary-fixed": "#00164e", "surface-container-highest": "#dae2fd", "on-tertiary-fixed": "#2a1700", "outline-variant": "#c5c5d3", "on-secondary-fixed": "#002113", "surface-dim": "#d2d9f4", "secondary-fixed-dim": "#4edea3", "inverse-surface": "#283044", "primary": "#00236f", "on-secondary-container": "#00714d", "on-tertiary-container": "#ef9900", "tertiary": "#3e2400", "tertiary-container": "#5c3800", "surface-tint": "#4059aa", "primary-fixed": "#dce1ff", "secondary": "#006c49", "tertiary-fixed-dim": "#ffb95f", "inverse-primary": "#b6c4ff", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "inverse-on-surface": "#eef0ff", "surface-container-low": "#f2f3ff", "on-surface-variant": "#444651", "on-tertiary-fixed-variant": "#653e00", "secondary-container": "#6cf8bb", "on-background": "#131b2e", "surface-container-high": "#e2e7ff", "surface": "#faf8ff", "on-surface": "#131b2e", "outline": "#757682", "on-primary": "#ffffff", "on-secondary": "#ffffff", "tertiary-fixed": "#ffddb8", "surface-container": "#eaedff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter": "1.25rem", "space-md": "1rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "margin": "2rem" }, "fontFamily": { "title-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, "fontSize": { "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="PedagoPlan Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1Xuc3jjGmQYqB93jzLK5C4l9j6E4JUnjM1rZ7aO7T4kgTEJ5dlgZBfsqQHZnaiyCaVp-jB3g1pozF3PXzsvSoT48y2mncXGNCt0tIhGGJ3ExhQWkC9kNGrEwBUJxp6S--vlWmEspho9wug8ftS1WmwnvKBwdSsaBz4dP-RW2uUlmSrb3tGRAKCGhFzgVwek1g_CaYwMs71WIwAeWT5kB6a7I3YtTyDcZosoNmP5CujwTNO-OLF3yOQpvxef"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5 leading-none"><span class="font-title-md text-title-md text-primary tracking-tight truncate">PedagoPlan</span><span class="text-[10px] text-on-surface-variant font-label-sm font-semibold opacity-60">•</span><span class="font-label-sm text-label-sm text-on-surface-variant font-semibold truncate">Diario</span></div><span class="font-label-sm text-label-sm text-outline tracking-normal truncate">Prácticas Profesionales • Ciclo 2024-II</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notificaciones" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors focus:outline-none"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="relative flex items-center justify-center pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_4px_rgba(19,27,46,0.12)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmgABNugxBbh3J_lUI9nDXzOP0OYFz4WZk-TPh-yfsjobvguEP8Vcowfee1f_Bk16oSzOvUX8aoXn117mxIhoAEorxdJTEfqwhuR-0iRfcg5UP2T-0TR7cJN4m9T2I_G1o05FOSckvPp6gBG3sxYwz7NWB13hxcg7YyYQH6xumJzaDDo488OVNYTF7VCa5Gd0097Jk0oAVBWHrFwGcRpLUuuAx8jOijxY4if2k10MX8vShZGcHoGsLQA"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-secondary rounded-full ring-2 ring-surface"></span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter-mobile gap-space-md pb-6">
+<!-- Selector de Semana Formativa & Contexto Reflexivo -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary-fixed opacity-40 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between gap-space-xs mb-space-xs">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">auto_stories</span>
+        Bitácora de Práctica
+      </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Fase Activa 2024-II</span>
+</div>
+<div class="flex items-center justify-between gap-space-sm mt-1">
+<div class="flex-1 min-w-0">
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface tracking-tight truncate">Semana 8: Gestión del aula y motivación</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Escuela Primaria Lic. Benito Juárez • 3.° Grado Grupo B</p>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0 hover:bg-surface-container-highest transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+</button>
+</div>
+<!-- Indicador de Progreso Reflexivo de la Semana -->
+<div class="mt-3 pt-3 bg-surface-container/60 -mx-space-md -mb-space-md px-space-md py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Competencia eje: Mediación pedagógica</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Objetivo semanal 85%</span>
+</div>
+</div>
+<!-- Métricas Clave de Bitácora -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">psychology_alt</span>
+</div>
+<div class="min-w-0">
+<span class="font-headline-md text-headline-md text-primary block leading-none">18</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant line-clamp-1 mt-0.5">Incidentes críticos</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div class="min-w-0">
+<span class="font-headline-md text-headline-md text-secondary block leading-none">6</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant line-clamp-1 mt-0.5">Revisados por tutor</span>
+</div>
+</div>
+</div>
+<!-- Botón de Acción Principal y Accesos Rápidos de Registro -->
+<div class="bg-primary text-on-primary rounded-xl p-space-md shadow-md flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-primary">Nuevo Registro Reflexivo</span>
+<span class="font-body-sm text-body-sm text-on-primary-container">Captura vivencias de aula antes de salir del centro</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 text-on-primary flex items-center justify-center transition-transform active:scale-90 shrink-0">
+<span class="material-symbols-outlined text-[24px]">add</span>
+</button>
+</div>
+<!-- Píldoras de Entrada Multimodal Rápida -->
+<div class="grid grid-cols-3 gap-2 pt-1">
+<button class="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-surface-container-lowest/15 hover:bg-surface-container-lowest/25 transition-colors text-on-primary active:scale-95">
+<span class="material-symbols-outlined text-[18px]">add_a_photo</span>
+<span class="font-label-sm text-label-sm font-semibold">Foto</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-surface-container-lowest/15 hover:bg-surface-container-lowest/25 transition-colors text-on-primary active:scale-95">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+<span class="font-label-sm text-label-sm font-semibold">Nota de Voz</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-surface-container-lowest/15 hover:bg-surface-container-lowest/25 transition-colors text-on-primary active:scale-95">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span class="font-label-sm text-label-sm font-semibold">Observación</span>
+</button>
+</div>
+</div>
+<!-- Encabezado de la Línea de Tiempo de Bitácora -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">history_edu</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Línea de Tiempo Crítica</h3>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded-full text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Filtrar</span>
+</div>
+</div>
+<!-- Entrada 1: Incidente Crítico Reciente (Hoy) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative flex flex-col gap-3">
+<!-- Encabezado de la tarjeta con metadatos -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col gap-1 min-w-0">
+<span class="inline-flex self-start items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Clima de aula e intervención socioemocional
+        </span>
+<h4 class="font-title-md text-title-md text-on-surface font-bold leading-snug">
+          Gestión de la atención y resolución de conflictos entre pares
+        </h4>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-sm text-label-sm text-primary font-bold">Hoy, 11:45 AM</span>
+<span class="font-label-sm text-label-sm text-outline">Sesión Matemáticas</span>
+</div>
+</div>
+<!-- Estructura Pedagógica Reflexiva Tripartita -->
+<div class="flex flex-col gap-2.5 bg-surface-container-low rounded-lg p-3">
+<!-- Hecho Objetivo -->
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span class="font-label-sm text-label-sm font-bold">Descripción del hecho:</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-5">
+          Durante la actividad de fracciones en equipos mixtos, dos alumnos disputaron el liderazgo del material manipulativo, lo que generó interrupción y dispersión generalizada en tres mesas circundantes.
+        </p>
+</div>
+<!-- Análisis Fundamentado -->
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span class="font-label-sm text-label-sm font-bold">Análisis pedagógico (Fundamento: L. Vygotsky):</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-5">
+          Se evidencia la necesidad de andamiaje explícito en la Zona de Desarrollo Próximo (ZDP) socioemocional; el conflicto interpersonal inhibió la mediación semiótica del material concreto antes de consolidar el rol cooperativo.
+        </p>
+</div>
+<!-- Compromiso Formativo -->
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5 text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+<span class="font-label-sm text-label-sm font-bold">Compromiso de mejora futura:</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-5">
+          Implementar roles explícitos rotativos (coordinador, secretario de materiales, vocero) mediante tarjetas de responsabilidades visuales antes de repartir kits didácticos.
+        </p>
+</div>
+</div>
+<!-- Evidencias Fotográficas con Máscara Ética de Privacidad Infantil -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">photo_library</span>
+<span class="font-label-sm text-label-sm font-semibold">Evidencias contextuales protegidas (2)</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Anonimización activa</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="relative rounded-lg overflow-hidden h-28 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Primary school children in Mexico working collaboratively with colorful wooden math fraction blocks on a wooden table, faces naturally blurred or captured from top angles to protect child privacy, warm natural classroom daylight, pedagogical documentary photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGrFDVeDPJu6yIP4aRrPrpnFSkiv8wp20jJVFdWCl2X-s3R76vjy5W0hMXq7tX_PizcldfQGKE2POfBBwFJKrzje0ttvMCjFc8paWnmu0d32WI28tRP__JKrJeAANDECwJ4WQo4OiSc1lTLFPQRjuCFpajAsa44PuUQ8hDvwm6Fqo_1IHtWICafqAxoaGpq-p4q-uI2SQrMankl_dmMGhFUeML75_vyG9H8tzDEp5Ut0NTggokkIOnYQ"/>
+<div class="absolute bottom-1 right-1 bg-surface-variant/80 px-1.5 py-0.5 rounded text-[10px] font-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">privacy_tip</span>
+            Protegida
+          </div>
+</div>
+<div class="relative rounded-lg overflow-hidden h-28 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close-up of student hands arranging fractional circular fraction discs on grid exercise notebooks, dynamic cooperative group work setting in early elementary classroom, gentle overhead lighting with muted educational palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw9NpbOJvJzny761xySIpU2dZg6iWhmCjkhQd93kkrCRRBtUaxn9PYGOyRNJnbOUP_XAvjDITbEnpm94ireb-MDAd8SRfpERMVOe7Ngv1JkuaSZlYMhdpE50UUibT7UaWgoL3o0uAjhHojeVG5SoHT2FmZUh5CDwlVDTfrRbwaHkvQlJi6xaLLVXnDi8StgSjiw3RXgAc014WReu1B4LOVBbvN3wBFh0g3bODaO4ULq6tXay_PEPIH8Q"/>
+<div class="absolute bottom-1 right-1 bg-surface-variant/80 px-1.5 py-0.5 rounded text-[10px] font-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">privacy_tip</span>
+            Protegida
+          </div>
+</div>
+</div>
+</div>
+<!-- Firma y Validación -->
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">draw</span>
+<span class="font-label-sm text-label-sm font-bold">Firmado digitalmente por practicante</span>
+</div>
+<button class="flex items-center gap-1 text-primary hover:text-primary-container font-label-sm text-label-sm font-semibold">
+<span>Detalles</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Entrada 2: Incidente Previo con Retroalimentación Universitaria -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative flex flex-col gap-3">
+<!-- Encabezado de la tarjeta -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col gap-1 min-w-0">
+<span class="inline-flex self-start items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Procesos cognitivos de aprendizaje
+        </span>
+<h4 class="font-title-md text-title-md text-on-surface font-bold leading-snug">
+          Dificultades en la apropiación del valor posicional numérico
+        </h4>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">24 Oct</span>
+<span class="font-label-sm text-label-sm text-outline">Diagnóstico Inicial</span>
+</div>
+</div>
+<!-- Extracto del Registro -->
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+      Al descomponer cantidades de centenas y unidades, el 30% del grupo omitió el cero intermediario (ej. escribieron "15" en lugar de "105"). Se identificó una barrera en la transición gráfica abstracto-concreta.
+    </p>
+<!-- Caja de Retroalimentación del Tutor Universitario (Feedback Formativo) -->
+<div class="bg-tertiary-fixed/30 rounded-lg p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed-dim/60 flex items-center justify-center text-tertiary font-bold text-[12px]">
+            DC
+          </div>
+<div class="flex flex-col leading-none">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Dra. Carmen Del Toro</span>
+<span class="font-label-sm text-[10px] text-outline">Supervisora de Prácticas Académicas</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 text-[11px] font-bold text-secondary">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+          Validado
+        </span>
+</div>
+<div class="flex items-start gap-2 pt-1">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">comment</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+          "Excelente observación de las barreras de aprendizaje (BAP). Considera material concreto tipo Montessori (estampillas o perlas doradas) para tangibilizar el valor de la ausencia como cero relacional antes de retornar al libro de texto."
+        </p>
+</div>
+<div class="flex items-center justify-end gap-2 pt-1">
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-xs hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[14px]">reply</span>
+          Responder al supervisor
+        </button>
+</div>
+</div>
+<!-- Pie de Tarjeta -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">attachment</span>
+<span class="font-label-sm text-label-sm">1 nota de voz adjunta (02:14 min)</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Sugerencia Didáctica / Tip Pedagógico Semanal -->
+<div class="bg-surface-variant/40 rounded-xl p-space-md flex items-center gap-space-sm mt-1">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Consejo de práctica reflexiva</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Recuerda describir los incidentes en primera persona sin emitir juicios sobre los estudiantes; enfoca el registro en las condiciones didácticas del entorno.
+      </p>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interacción ligera para feedback táctil en chips multimodales
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      if (!this.classList.contains('active-tab')) {
+        this.style.transform = 'scale(0.97)';
+        setTimeout(() => {
+          this.style.transform = '';
+        }, 120);
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(19,27,46,0.05)]" data-active-classes="text-primary font-bold"><div class="h-16 px-gutter-mobile flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors focus:outline-none" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm">Inicio</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors focus:outline-none" data-path="planeaciones" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-sm text-label-sm">Planeaciones</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors focus:outline-none text-primary font-bold" data-path="diario" href="#"><span class="material-symbols-outlined text-[22px]">history_edu</span><span class="font-label-sm text-label-sm">Diario</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors focus:outline-none" data-path="evaluacion" href="#"><span class="material-symbols-outlined text-[22px]">verified</span><span class="font-label-sm text-label-sm">Evaluación</span></a></div></nav></body></html>
